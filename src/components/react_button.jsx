@@ -3,7 +3,7 @@ import ReactiveButton from 'reactive-button';
 
 /**https://arifszn.github.io/reactive-button/ */
 
-const Button = memo((props) => {
+const ReactButton = memo((props) => {
     const [state, setState] = useState('idle');
 
     const onClickHandler = () => {
@@ -39,4 +39,4 @@ const Button = memo((props) => {
         />);
 });
 
-export default Button;
+export default ReactButton;

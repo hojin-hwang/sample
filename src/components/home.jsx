@@ -3,8 +3,10 @@ import Loader from "react-loader";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styles from './home.module.css'
-import Button from './button';
+import ReactButton from './react_button';
 import MySlider from './mySlider';
+
+import Button from '@material-ui/core/Button';
 
 function Home(props) {
   
@@ -53,8 +55,26 @@ const loadingButtonClick = () =>{
             </div>
         </Carousel>
 
-        <Button className={styles.loadingBtn} state={'idle'} idleText={'Loading Button'} shadow={true} onClick={loadingButtonClick} />
+        <ReactButton className={styles.loadingBtn} state={'idle'} idleText={'Loading Button'} shadow={true} onClick={loadingButtonClick} />
         <MySlider />
+
+        <Button variant="contained">Default</Button>
+        <Button variant="contained" color="primary">
+          Primary
+        </Button>
+        <Button variant="contained" color="secondary">
+          Secondary
+        </Button>
+        <Button variant="contained" disabled>
+          Disabled
+        </Button>
+        <Button variant="contained" color="primary" href="#contained-buttons">
+          Link
+        </Button>
+
+        <Button variant="contained" color="primary" disableElevation>
+          Disable elevation
+        </Button>
 
       <Loader
         loaded={loaded}
